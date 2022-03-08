@@ -2,6 +2,7 @@ import exampleVideoData from '/src/data/exampleVideoData.js';
 import VideoList from './VideoList.js';
 import Search from './Search.js';
 import VideoPlayer from './VideoPlayer.js';
+
 class App extends React.Component {
   constructor() {
     super();
