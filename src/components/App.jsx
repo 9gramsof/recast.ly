@@ -4,8 +4,8 @@ import Search from './Search.js';
 import VideoPlayer from './VideoPlayer.js';
 
 class App extends React.Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       videoList: exampleVideoData,
       movie: exampleVideoData[0]
@@ -32,7 +32,12 @@ class App extends React.Component {
             <div><VideoPlayer video={this.state.movie}/></div>
           </div>
           <div className="col-md-5">
-            <div><VideoList videos={this.state.videoList}/></div>
+            <div>
+              <VideoList
+                videos={this.state.videoList}
+                onClick={this.onClick.bind(this)}
+              />
+            </div>
           </div>
         </div>
       </div>
